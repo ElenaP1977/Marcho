@@ -161,7 +161,6 @@
   }
 }
 
-
 .top-slider {
   background-color: $bg;
   background-image: url('../images/decor/top-slider_bg.png');
@@ -276,7 +275,8 @@
     height: 52px;
   }
   &__item {
-    background-color: #fff;;
+    background-color: #fff;
+    ;
     box-shadow: 20px 0 60px 0 rgba(202, 202, 202, 0.35);
     padding: 60px 30px;
     width: 370px;
@@ -355,9 +355,51 @@
   }
 }
 
+.video-fashion {
+  background-color: $bg;
+  background-image: url('../images/decor/video-fashion_bg.svg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 125px 0;
+  &__inner {
+    display: flex;
+  }
+  &__popup {
+    margin-right: 60px;
+    max-width: 530px;
+    height: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__content {
+    max-width: 570px;
+  }
+  &__subtittle {
+    padding-top: 75px;
+    color: $accent;
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-transform: uppercase
+  }
+  &__tittle {
+    text-align: left
+  }
+  &__text {
+    margin-bottom: 55px;
+  }
+  &__link {
+    @extend %btn;
+  }
+}
 
 
-.categories__link {}
+
 
 
 
