@@ -168,7 +168,6 @@
     @extend %btn;
     border: none;
     box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
-    cursor: pointer;
   }
 }
 
@@ -632,24 +631,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    span{
+    span {
       @extend %roboto-700;
       font-size: 48px;
       color: $title;
       margin: 10px 0 7px;
     }
   }
-
 }
-
-
-
-
-.days {}
-.smalltext {}
-.hours {}
-.minutes {}
-.seconds {}
 
 
 .partners {
@@ -662,8 +651,103 @@
   }
 }
 
-.partners__item {}
-.partners__img {}
+.blog {
+  padding: 50px 0 160px;
+  background-image: url('../images/blog_bg.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 126px;
+      height: 53px;
+      right: -25px;
+      top: -25px;
+      background-image: url('../images/decor/blog_decor.svg');
+      z-index: -1;
+    }
+  }
+  &__item {
+    max-width: 370px;
+    border: 1px solid #ececec;
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 20px 0 60px 0 rgba(202, 202, 202, 0.35);
+      border: none;
+      .blog__link {
+        color: $accent;
+        &::after {
+          background-image: url('../images/icons/arrow-red.svg');
+        }
+      }
+    }
+  }
+  &__item-link {
+    display: block;
+  }
+  &__img {
+    height: 290px;
+    object-fit: cover
+  }
+  &__item-box {
+    padding: 30px 40px;
+  }
+  &__item-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__item-autor,
+  &__item-data {
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 4px;
+      left: 0;
+    }
+  }
+  &__item-autor {
+    &::before {
+      background-image: url('../images/icons/user-grey.svg')
+    }
+  }
+  &__item-data {
+    &::before {
+      background-image: url('../images/icons/time.svg')
+    }
+  }
+  &__item-title {
+    color: $title;
+    @extend %roboto-400;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  &__link {
+    position: relative;
+    transition: color 0.3s;
+  }
+  &__link {
+    &::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 8px;
+      background-image: url('../images/icons/arrow.svg');
+      top: 8px;
+      right: -15px;
+    }
+  }
+}
+
+
 
 
 @import 'media';
